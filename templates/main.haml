@@ -1,0 +1,23 @@
+%html
+  %head
+    %title
+      {title}
+    %a{:rel => "stylesheet", :href => "http://meyerweb.com/eric/tools/css/reset/reset.css", :media=>"screen", :type=>"text/css"}
+    %a{:rel => "shortcut icon", :href => "{Favicon}"}
+    %a{:rel => "alternate", :type => "application/rss+xml", :href => "{RSS}"}
+    {block:Description}
+    %meta{:name => "description", :content => "{MetaDescription}"}
+    {/block:Description}
+    
+  %body
+    .header
+      %h1
+        {Title}
+      {block:Description}
+      %p{:id => "description"}
+        {Description}
+      {/block:Description}
+    
+    = Haml::Engine.new(File.read('posts.haml')).render
+    
+    .footer
