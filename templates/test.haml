@@ -1,19 +1,21 @@
 %html
   %head
     %link{:rel => "stylesheet", :href => "main.css", :type=>"text/css"}
+    %script{:type => "text/javascript", :src => "jquery-1.4.2.min.js"}
+    %script{:type => "text/javascript", :src => "curvycorners.src.js"}
   
   %body
-  
-    .header
-      .title
-        %h1
-          This is a test
-      .description
-        %h3
-          Only a test, motherfuckers
+    .wrapper
+      .header
+        .title
+          %h1
+            This is a test
+        .description
+          %h3
+            Only a test, motherfuckers asdfas asdf asadf asdf asdfasdf asdf asdf asdf asdf asdf asdf asdf sdhkf;lka j;dskjf;ksdoj ;akjdslkfj kajsdlkfj lk jas;lkd jflkasdj;l adf;j ;ljsdj a;sj;lk ;la ;la f;a  f; a;lad;l js;kja;lfasl
+      .posts
+        = 5.times do 
+          = Haml::Engine.new(File.read('templates/testpost.haml')).render
 
-    = 5.times do 
-      = Haml::Engine.new(File.read('templates/testpost.haml')).render
 
-
-    .footer
+      .footer
