@@ -14,9 +14,12 @@ h3
   font: italic bold 18px "Times New Roman"
 
 @mixin curvy($radius)
+  behavior: url(border-radius.htc)
+  zoom: 1
   border-radius: $radius
   -moz-border-radius: $radius
   -webkit-border-radius: $radius
+  -khtml-border-radius: $radius
   
 .clear
   clear: both
@@ -32,22 +35,22 @@ h3
   width: 800px
   height: auto
   margin: 0px auto
-  .title
-    @include curvy(12px)
+  .title    
     padding: 10px 20px
     height: 90px
     width: 800px
     background-color: #0099ff
     color: #444444
+    border-color: #0099FF
+    @include curvy(12px)
     position: absolute
     top: 0px
     left: 0px
     z-index: 1
   .description
-    @include curvy(8px)
     height: auto
     width: auto
-    max-width: 600px
+    width: 600px
     overflow: hidden
     position: absolute
     top: 100px
@@ -55,6 +58,8 @@ h3
     text-align: right
     color: #ffffff
     background-color: #000000
+    border-color: #000000
+    @include curvy(8px)
     padding: 12px 8px 6px 8px
 
 .posts
@@ -67,9 +72,11 @@ h3
   .content
     @include curvy(10px)
     background-color: #0099ff
+    border-color: #0099ff
   .timestamp
     @include curvy(8px)
     color: #fff
     background-color: #000
+    border-color: #000
   
 .footer
