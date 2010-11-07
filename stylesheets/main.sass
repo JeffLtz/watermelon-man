@@ -49,8 +49,8 @@ h3
     z-index: 1
   .description
     height: auto
-    width: auto
-    width: 600px
+    width: expression( this.clientWidth > 599 ? "600px" : "auto" )
+    max-width: 600px
     overflow: hidden
     position: absolute
     top: 100px
