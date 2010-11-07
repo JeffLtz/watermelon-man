@@ -30,23 +30,27 @@ h3
   margin: 0px auto
   text-align: left
   position: relative
+  
 
 .header
   width: 800px
   height: auto
   margin: 0px auto
-  .title    
-    padding: 10px 20px
-    height: 90px
-    width: 800px
-    background-color: #0099ff
-    color: #444444
-    border-color: #0099FF
-    @include curvy(12px)
-    position: absolute
-    top: 0px
-    left: 0px
-    z-index: 1
+  position: relative
+  .twrapper
+    position: relative
+    .title    
+      padding: 10px 20px
+      height: 90px
+      width: 800px
+      background-color: #0099ff
+      color: #444444
+      border-color: #0099FF
+      @include curvy(12px)
+      position: absolute
+      top: 0px
+      left: 0px
+      z-index: 5
   .description
     height: auto
     width: expression( this.clientWidth > 599 ? "600px" : "auto" )
