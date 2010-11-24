@@ -10,6 +10,7 @@ h1
   font: 72px "Cooper Black"
 h2
   font: 24px "Cooper Black"
+  padding-bottom: 8px
 h3
   font: italic bold 18px "Times New Roman"
 
@@ -50,36 +51,41 @@ h3
       position: absolute
       top: 0px
       left: 0px
-      z-index: 5
   .description
     height: auto
-    width: expression( this.clientWidth > 599 ? "600px" : "auto" )
-    max-width: 600px
+    width: expression( this.clientWidth > 524 ? "525px" : "auto" )
+    max-width: 525px
+    height: expression( this.clientHeight > 78 ? "79px" : "auto")
+    max-height: 79px
     overflow: hidden
     position: absolute
     top: 100px
-    right: 0px
+    right: 20px
     text-align: right
     color: #ffffff
     background-color: #000000
     border-color: #000000
     @include curvy(8px)
-    padding: 12px 8px 6px 8px
+    padding: 6px 12px 9px 8px
+    margin-top: -3px
 
 .posts
   position: absolute
-  top: 140px
+  top: 160px
   left: 145px
 .post
   width: 550px
   margin: 60px auto
   position: relative
   .content
+    padding: 8px 8px 16px 8px
     @include curvy(10px)
     background-color: #0099ff
     border-color: #0099ff
     position: relative
   .timestamp
+    padding: 8px 5px
+    margin-top: -8px
     width: expression( this.clientWidth > 539 ? "540px" : "auto" )
     max-width: 540px
     @include curvy(8px)
@@ -87,6 +93,6 @@ h3
     background-color: #000
     border-color: #000
     position: absolute
-    right: 0
+    right: 15px
   
 .footer
