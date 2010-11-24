@@ -9,7 +9,7 @@ html
 h1
   font: 72px "Cooper Black"
 h2
-  font: 24px "Cooper Black"
+  font: 30px "Cooper Black"
   padding-bottom: 8px
 h3
   font: italic bold 18px "Times New Roman"
@@ -66,7 +66,7 @@ h3
       border-color: #000000
       @include curvy(8px)
       padding: 6px 12px 9px 8px
-      margin-top: -3px
+      margin-top: -7px
 
 .posts
   position: absolute
@@ -77,15 +77,15 @@ h3
   margin: 60px auto
   position: relative
   .content
-    padding: 8px 8px 16px 8px
+    padding: 8px 8px 24px 8px
     @include curvy(10px)
     background-color: #0099ff
     border-color: #0099ff
     position: relative
     overflow: visible
     .timestamp
+      margin-top: 8px
       padding: 8px 5px
-      margin-top: -8px
       width: expression( this.clientWidth > 539 ? "540px" : "auto" )
       max-width: 540px
       @include curvy(8px)
