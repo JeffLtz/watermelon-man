@@ -1,7 +1,9 @@
 %html
   %head
     %link{:rel => "stylesheet", :href => "main.css", :type=>"text/css"}
-  
+    %script{:src => "jquery-1.4.2.min.js", :type => "text/javascript"}
+    %script{:src => "cufon-yui.js", :type => "text/javascript"}
+    %script{:src => "Cooper_Std_900.font.js", :type => "text/javascript"}
   %body
     .wrapper
       .header
@@ -10,10 +12,11 @@
             This is a test
       .description
         %h3
-          Only a test, motherfuckers asdfas asdf asadf asdf asdfasdf asdf asdf asdf asdf asdf asdf asdf sdhkf;lka j;dskjf;ksdoj ;akjdslkfj kaasdjf jals;kd j;alsdjf sajf;lsd aksd;lfjad;ljal;k alkjaslf lf ;laj;asjflkadslkfja;lkasd; afasd;fla;j lkajl;kaj lkajlkajfasjf;as;lf js;lfjaslk; j;fadfas;lks ;ld ;laj;owejf ;flesdljf wejfasidjfkas  wejlkjasd.kfj awfawlejfawelf jwaeijfasdjlkajf al  asdfas;k ja;slfj la jjsdlkfj lk jas;lkd jflkasdj;l adf;j ;ljsdj a;sj;lk ;la ;la f;a  f; a;lad;l js;kja;lfasl
+          Only a test, motherfuckers asdfas asdf asadf asdf asdfasdf asdf asdf asdf asdf asdf asdf asdf sdhkf;lka j;dskjf;ksdoj ;akjdslkfj kaasdjf jals;kd j;alsdjf sajf;lsd ak
       .clear
       = 5.times do 
         = Haml::Engine.new(File.read('templates/testpost.haml')).render
 
-
       .footer
+        .picture.no_left_margin
+        .following.no_right_margin
