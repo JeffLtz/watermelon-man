@@ -38,36 +38,35 @@ h3
   height: auto
   margin: 0px auto
   position: relative
-  .twrapper
-    position: relative
-    .title    
-      padding: 10px 20px
-      height: 90px
-      width: 800px
-      background-color: #0099ff
-      color: #444444
-      border-color: #0099FF
-      @include curvy(12px)
-      position: absolute
-      top: 0px
-      left: 0px
-  .description
-    height: auto
-    width: expression( this.clientWidth > 524 ? "525px" : "auto" )
-    max-width: 525px
-    height: expression( this.clientHeight > 78 ? "79px" : "auto")
-    max-height: 79px
-    overflow: hidden
+  .title    
+    padding: 10px 20px
+    height: 90px
+    width: 800px
+    background-color: #0099ff
+    color: #444444
+    border-color: #0099FF
+    @include curvy(12px)
     position: absolute
-    top: 100px
-    right: 20px
-    text-align: right
-    color: #ffffff
-    background-color: #000000
-    border-color: #000000
-    @include curvy(8px)
-    padding: 6px 12px 9px 8px
-    margin-top: -3px
+    top: 0px
+    left: 0px
+    overflow: visible
+    .description
+      height: auto
+      width: expression( this.clientWidth > 524 ? "525px" : "auto" )
+      max-width: 525px
+      height: expression( this.clientHeight > 78 ? "79px" : "auto")
+      max-height: 79px
+      overflow: hidden
+      position: absolute
+      top: 100px
+      right: 20px
+      text-align: right
+      color: #ffffff
+      background-color: #000000
+      border-color: #000000
+      @include curvy(8px)
+      padding: 6px 12px 9px 8px
+      margin-top: -3px
 
 .posts
   position: absolute
@@ -83,16 +82,17 @@ h3
     background-color: #0099ff
     border-color: #0099ff
     position: relative
-  .timestamp
-    padding: 8px 5px
-    margin-top: -8px
-    width: expression( this.clientWidth > 539 ? "540px" : "auto" )
-    max-width: 540px
-    @include curvy(8px)
-    color: #fff
-    background-color: #000
-    border-color: #000
-    position: absolute
-    right: 15px
+    overflow: visible
+    .timestamp
+      padding: 8px 5px
+      margin-top: -8px
+      width: expression( this.clientWidth > 539 ? "540px" : "auto" )
+      max-width: 540px
+      @include curvy(8px)
+      color: #fff
+      background-color: #000
+      border-color: #000
+      position: absolute
+      right: 15px
   
 .footer
