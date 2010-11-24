@@ -35,7 +35,6 @@ h3
 
 .header
   width: 800px
-  height: auto
   margin: 0px auto
   position: relative
   .title    
@@ -46,35 +45,28 @@ h3
     color: #444444
     border-color: #0099FF
     @include curvy(12px)
-    position: absolute
-    top: 0px
-    left: 0px
+    position: relative
     overflow: visible
-    .description
-      height: auto
-      width: expression( this.clientWidth > 524 ? "525px" : "auto" )
-      max-width: 525px
-      height: expression( this.clientHeight > 78 ? "79px" : "auto")
-      max-height: 79px
-      overflow: hidden
-      position: absolute
-      top: 100px
-      right: 20px
-      text-align: right
-      color: #ffffff
-      background-color: #000000
-      border-color: #000000
-      @include curvy(8px)
-      padding: 6px 12px 9px 8px
-      margin-top: -7px
+.description
+  width: expression( this.clientWidth > 524 ? "525px" : "auto" )
+  max-width: 525px
+  overflow: hidden
+  position: relative
+  display: inline
+  float: right
+  text-align: right
+  color: #ffffff
+  background-color: #000000
+  border-color: #000000
+  @include curvy(8px)
+  padding: 6px 12px 9px 8px
+  margin: -7px 20px 15px 20px
 
-.posts
-  position: absolute
-  top: 160px
-  left: 145px
 .post
+  height: auto
   width: 550px
-  margin: 60px auto
+  margin-top: 60px 
+  margin-left: 118px
   position: relative
   .content
     padding: 8px 8px 24px 8px

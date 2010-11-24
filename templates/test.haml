@@ -8,12 +8,12 @@
         .title
           %h1
             This is a test
-          .description
-            %h3
-              Only a test, motherfuckers asdfas asdf asadf asdf asdfasdf asdf asdf asdf asdf asdf asdf asdf sdhkf;lka j;dskjf;ksdoj ;akjdslkfj kaasdjf jals;kd j;alsdjf sajf;lsd aksd;lfjad;ljal;k alkjaslf lf ;laj;asjflkadslkfja;lkasd; afasd;fla;j lkajl;kaj lkajlkajfasjf;as;lf js;lfjaslk; j;fadfas;lks ;ld ;laj;owejf ;flesdljf wejfasidjfkas  wejlkjasd.kfj awfawlejfawelf jwaeijfasdjlkajf al  asdfas;k ja;slfj la jjsdlkfj lk jas;lkd jflkasdj;l adf;j ;ljsdj a;sj;lk ;la ;la f;a  f; a;lad;l js;kja;lfasl
-      .posts
-        = 5.times do 
-          = Haml::Engine.new(File.read('templates/testpost.haml')).render
+      .description
+        %h3
+          Only a test, motherfuckers asdfas asdf asadf asdf asdfasdf asdf asdf asdf asdf asdf asdf asdf sdhkf;lka j;dskjf;ksdoj ;akjdslkfj kaasdjf jals;kd j;alsdjf sajf;lsd aksd;lfjad;ljal;k alkjaslf lf ;laj;asjflkadslkfja;lkasd; afasd;fla;j lkajl;kaj lkajlkajfasjf;as;lf js;lfjaslk; j;fadfas;lks ;ld ;laj;owejf ;flesdljf wejfasidjfkas  wejlkjasd.kfj awfawlejfawelf jwaeijfasdjlkajf al  asdfas;k ja;slfj la jjsdlkfj lk jas;lkd jflkasdj;l adf;j ;ljsdj a;sj;lk ;la ;la f;a  f; a;lad;l js;kja;lfasl
+      .clear
+      = 5.times do 
+        = Haml::Engine.new(File.read('templates/testpost.haml')).render
 
 
       .footer

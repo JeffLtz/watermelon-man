@@ -8,12 +8,12 @@
         .title
           %h1
             This is a test
-          .description
-            %h3
-              Only a
-      .posts
-        = 5.times do 
-          = Haml::Engine.new(File.read('templates/testpost.haml')).render
+      .description
+        %h3
+          Only a
+      .clear
+      = 5.times do 
+        = Haml::Engine.new(File.read('templates/testpost.haml')).render
 
 
       .footer
