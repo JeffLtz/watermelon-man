@@ -1,68 +1,68 @@
 {block:Posts}
 .post
+  .content
+    {block:Text}
+    {block:Title}
+    %h2
+      {Title}
+    {/block:Title}
+    {Body}
+    {/block:Text}
 
-  {block:Text}
-  {block:Title}
-  %h1
-    {Title}
-  {/block:Title}
-  {Body}
-  {/block:Text}
+    {block:Chat}
+    {block:Title}
+    %h2
+      {Title}
+    {/block:Title}            
+    %dl
+      {block:Lines}
+      {block:Label}
+      %dt
+        {Label}
+      {/block:Label}
+      %dd
+        {Line}
+      {/block:Lines}
+    {/block:Chat}
 
-  {block:Chat}
-  {block:Title}
-  %h1
-    {Title}
-  {/block:Title}            
-  %dl
-    {block:Lines}
-    {block:Label}
-    %dt
-      {Label}
-    {/block:Label}
-    %dd
-      {Line}
-    {/block:Lines}
-  {/block:Chat}
+    {block:Quote}
+    %h2
+      {Quote}
+    {block:Source}{Source}{/block:Source}
+    {/block:Quote}      
 
-  {block:Quote}
-  %h1
-    {Quote}
-  {block:Source}{Source}{/block:Source}
-  {/block:Quote}      
+    {block:Link}
+    %h2
+      %a{:href => "{URL}", :target => "{Target}"}
+        {Name}
+    {block:Description}{Description}{/block:Description}
+    {/block:Link}
 
-  {block:Link}
-  %h1
-    %a{:href => "{URL}", :target => "{Target}"}
-      {Name}
-  {block:Description}{Description}{/block:Description}
-  {/block:Link}
+    {block:Photo}
+    %a{:href => "{LinkURL}"}
+      %img{:src => "{PhotoURL-500}", :alt => "{PhotoAlt}"}
+    {block:Caption}{Caption}{/block:Caption}
+    {/block:Photo}
 
-  {block:Photo}
-  %a{:href => "{LinkURL}"}
-    %img{:src => "{PhotoURL-500}", :alt => "{PhotoAlt}"}
-  {block:Caption}{Caption}{/block:Caption}
-  {/block:Photo}
+    {block:Photoset}
+    {Photoset-500}
+    {block:Caption}{Caption}{/block:Caption}
+    {/block:Photoset}
 
-  {block:Photoset}
-  {Photoset-500}
-  {block:Caption}{Caption}{/block:Caption}
-  {/block:Photoset}
+    {block:Video}
+    {Video-500}
+    {block:Caption}{Caption}{/block:Caption}      
+    {/block:Video}
 
-  {block:Video}
-  {Video-500}
-  {block:Caption}{Caption}{/block:Caption}      
-  {/block:Video}
+    {block:Audio}
+    {AudioPlayer}{PlayCountWithLabel}
+    {block:Caption}{Caption}{/block:Caption}      
+    {/block:Audio}
 
-  {block:Audio}
-  {AudioPlayer}{PlayCountWithLabel}
-  {block:Caption}{Caption}{/block:Caption}      
-  {/block:Audio}
-
-  {block:Answer}
-  {Question}
-  Asked by {Asker}
-  {Answer}
-  {/block:Answer}
+    {block:Answer}
+    {Question}
+    Asked by {Asker}
+    {Answer}
+    {/block:Answer}
 
 {block:Posts}

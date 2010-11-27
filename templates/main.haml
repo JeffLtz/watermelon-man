@@ -1,8 +1,23 @@
 %html
   %head
+    %style{:type => "text/css", :media => "screen"}
+      = File.read('main.css')
+    %script{:src => "http://static.tumblr.com/jfofjkz/lWKlcewgn/cufon-yui.js", :type => "text/javascript"}
+    %script{:src => "http://static.tumblr.com/jfofjkz/jT1lcewhu/cooper_std_900.font.js", :type => "text/javascript"}
+    %script{:src => "http://static.tumblr.com/jfofjkz/N8elck12r/dd_roundies_0.0.2a-min.js", :type => "text/javascript"}
+    %script{:type => "text/javascript"}
+      Cufon.replace('h1');
+      Cufon.replace('h2');  
+    %script{:type => "text/javascript"}
+      DD_roundies.addRule('.title', '12px');
+      DD_roundies.addRule('.description', '8px');
+      DD_roundies.addRule('.content', '10px');
+      DD_roundies.addRule('.timestamp', '8px');
+      DD_roundies.addRule('.picture', '10px');
+      DD_roundies.addRule('.following', '10px');    
+      
     %title
       {title}
-    %a{:rel => "stylesheet", :href => "http://meyerweb.com/eric/tools/css/reset/reset.css", :media=>"screen", :type=>"text/css"}
     %a{:rel => "shortcut icon", :href => "{Favicon}"}
     %a{:rel => "alternate", :type => "application/rss+xml", :href => "{RSS}"}
     {block:Description}
@@ -10,14 +25,19 @@
     {/block:Description}
     
   %body
-    .header
-      %h1
-        {Title}
+    .wrapper
+      .header
+        .title
+          %h1
+            {Title}
       {block:Description}
-      %p{:id => "description"}
+      .description
         {Description}
       {/block:Description}
+      .clear
     
-    = Haml::Engine.new(File.read('posts.haml')).render
+      = Haml::Engine.new(File.read('templates/posts.haml')).render
     
-    .footer
+      .footer
+        .picture.no_left_margin
+        .following.no_right_margin
