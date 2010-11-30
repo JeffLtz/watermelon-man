@@ -67,7 +67,8 @@
     
     .timestamp
       {block:Date}
-      {12Hour}:{Minutes}{AmPm} ~ {DayOfMonth} {Month} {Year}
+      %a{:href => "{Permalink}"}
+        {12Hour}:{Minutes}{AmPm} ~ {DayOfMonth} {Month} {Year} {block:NoteCount} ~ {NoteCountWithLabel}{/block:NoteCount}
       {/block:Date}
     
 {block:Posts}
