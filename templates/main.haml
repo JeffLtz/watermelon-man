@@ -27,12 +27,14 @@
   %body
     .wrapper
       .header
-        .title
-          %h1
-            {Title}
+        %a{:href =>"/", :style => "text-decoration: none"}
+          .title
+            %h1
+              {Title}
       {block:Description}
       .description
-        {Description}
+        %h3
+          {Description}
       {/block:Description}
       .clear
     
@@ -42,3 +44,6 @@
         .picture.no_left_margin
           %img{:src => "{PortraitURL-128}"}
         .following.no_right_margin
+          {block:Following}{block:Followed}
+          %a{:img => "{FollowedPortraitURL-24}", :href => "FollowedURL"}
+          {/block:Followed}{/block:Following}

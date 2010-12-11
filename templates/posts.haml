@@ -39,8 +39,9 @@
     {/block:Link}
 
     {block:Photo}
-    %a{:href => "{LinkURL}"}
-      %img{:src => "{PhotoURL-500}", :alt => "{PhotoAlt}"}
+    .photovideo
+      %a{:href => "{LinkURL}"}
+        %img{:src => "{PhotoURL-500}", :alt => "{PhotoAlt}"}
     {block:Caption}{Caption}{/block:Caption}
     {/block:Photo}
 
@@ -50,7 +51,8 @@
     {/block:Photoset}
 
     {block:Video}
-    {Video-500}
+    .photovideo
+      {Video-500}
     {block:Caption}{Caption}{/block:Caption}      
     {/block:Video}
 
@@ -65,10 +67,11 @@
     {Answer}
     {/block:Answer}
     
-    .timestamp
-      {block:Date}
-      %a{:href => "{Permalink}"}
-        {12Hour}:{Minutes}{AmPm} ~ {DayOfMonth} {Month} {Year} {block:NoteCount} ~ {NoteCountWithLabel}{/block:NoteCount}
-      {/block:Date}
+    {block:Date}
+    %a{:href => "{Permalink}", :style => "text-decoration: none"}
+      .timestamp
+        %h3
+          {12Hour}:{Minutes}{AmPm} ~ {DayOfMonth} {Month} {Year} {block:NoteCount} ~ {NoteCountWithLabel}{/block:NoteCount}
+    {/block:Date}
     
 {block:Posts}

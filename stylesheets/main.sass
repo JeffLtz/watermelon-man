@@ -8,6 +8,12 @@ html
 
 h1
   font: 72px "Cooper Black"
+  a, a:visited
+    text-decoration: none
+    color: #000000
+  a:hover
+    text-decoration: none
+    color: #ffffff
 h2
   font: 30px "Cooper Black"
   padding-bottom: 8px
@@ -58,7 +64,7 @@ h3
   background-color: #000000
   border-color: #000000
   @include curvy(8px)
-  padding: 6px 12px 9px 8px
+  padding: 6px 28px 9px 24px
   margin: -7px 20px 20px 20px
 
 .post
@@ -68,15 +74,17 @@ h3
   margin-left: 200px
   position: relative
   .content
-    padding: 8px 8px 24px 8px
+    padding: 24px
     @include curvy(10px)
     background-color: #0099ff
     border-color: #0099ff
     position: relative
     overflow: visible
+    .photovideo
+      text-align: center
     .timestamp
       margin-top: 8px
-      padding: 8px 5px
+      padding: 8px 18px
       width: expression( this.clientWidth > 539 ? "540px" : "auto" )
       max-width: 540px
       @include curvy(8px)
