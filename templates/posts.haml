@@ -14,14 +14,15 @@
     %h2
       {Title}
     {/block:Title}            
-    %dl
+    %dl{:class => "chat"}
       {block:Lines}
-      {block:Label}
       %dt
-        {Label}
-      {/block:Label}
+        {block:Label}
+        %h3
+          {Label}
+        {/block:Label}
       %dd
-        {Line}
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Line}
       {/block:Lines}
     {/block:Chat}
 
@@ -39,9 +40,8 @@
     {/block:Link}
 
     {block:Photo}
-    .photovideo
-      %a{:href => "{LinkURL}"}
-        %img{:src => "{PhotoURL-500}", :alt => "{PhotoAlt}"}
+    %a{:href => "{LinkURL}"}
+      %img{:src => "{PhotoURL-500}", :alt => "{PhotoAlt}"}
     {block:Caption}{Caption}{/block:Caption}
     {/block:Photo}
 
@@ -51,14 +51,19 @@
     {/block:Photoset}
 
     {block:Video}
-    .photovideo
-      {Video-500}
+    {Video-500}
     {block:Caption}{Caption}{/block:Caption}      
     {/block:Video}
 
     {block:Audio}
-    {AudioPlayer}{PlayCountWithLabel}
-    {block:Caption}{Caption}{/block:Caption}      
+    {AudioPlayer}
+    %p
+      %h3
+        {PlayCountWithLabel}
+    {block:Caption}
+    %p
+      {Caption}
+    {/block:Caption}      
     {/block:Audio}
 
     {block:Answer}
@@ -74,6 +79,8 @@
       .timestamp
         %h3
           {12Hour}:{Minutes}{AmPm} ~ {DayOfMonth} {Month} {Year} {block:NoteCount} ~ {NoteCountWithLabel}{/block:NoteCount}
+          {block:PostNotes}{PostNotes}{/block:PostNotes}
+          
     {/block:Date}
     
 {block:Posts}
