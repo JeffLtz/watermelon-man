@@ -79,8 +79,11 @@
       .timestamp
         %h3
           {12Hour}:{Minutes}{AmPm} ~ {DayOfMonth} {Month} {Year} {block:NoteCount} ~ {NoteCountWithLabel}{/block:NoteCount}
-          {block:PostNotes}{PostNotes}{/block:PostNotes}
-          
     {/block:Date}
     
+{block:PostNotes}
+.notelist
+  %h3
+    {PostNotes}
+{/block:PostNotes}    
 {block:Posts}
