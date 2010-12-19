@@ -40,6 +40,16 @@
     
       = Haml::Engine.new(File.read('templates/posts.haml')).render
     
+    {block:PreviousPage}
+    %a{:href => "{PreviousPage}"}
+      Newer
+    {/block:PreviousPage}
+    
+    {block:NextPage}
+    %a{:href => "NextPage"}
+      Older
+    {/block:NextPage}
+    
     .footer
       .picture.no_left_margin
         %img{:src => "{PortraitURL-128}"}
