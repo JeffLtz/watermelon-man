@@ -14,7 +14,7 @@
       DD_roundies.addRule('.content', '10px');
       DD_roundies.addRule('.timestamp', '8px');
       DD_roundies.addRule('.picture', '10px');
-      DD_roundies.addRule('.following', '10px');
+      DD_roundies.addRule('.twitter', '10px');
       
     %title
       {title}
@@ -60,7 +60,9 @@
       {block:Twitter}
       .twitter.no_right_margin
         %h3
-          @{TwitterUsername} on twitter
+          %a{:href => "http://twitter.com/{TwitterUsername}", :style => "text-decoration: none"}
+            @{TwitterUsername}
+          on twitter
 
         #tweets
           %noscript
@@ -70,7 +72,7 @@
             because you have disabled javascript.
       %script{:type => "text/javascript"}
         function recent_tweets(data) {
-        for (i=0; i < data.length; i++) {
+        for (i=0; i < 3; i++) {
         document.getElementById("tweets").innerHTML = 
         document.getElementById("tweets").innerHTML + 
         '<div class="tweet">' + data[i].text +

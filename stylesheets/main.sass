@@ -1,10 +1,15 @@
 @import "reset.scss"
 
 html
-  background-color: #e4e4e4
+  background-color: #c4c4c4
   body
     font: 16px "Times New Roman"
     text-align: center
+
+a:hover
+  cursor: hand
+a:visited
+  color: #ffffff
 
 h1
   font: 72px "Cooper Black"
@@ -12,6 +17,7 @@ h1
     text-decoration: none
     color: #000000
   a:hover
+    cursor: hand
     text-decoration: none
     color: #ffffff
 h2
@@ -66,6 +72,13 @@ h3
   @include curvy(8px)
   padding: 6px 28px 9px 24px
   margin: -7px 20px 20px 20px
+  h3
+    a
+      color: #ffffff
+    a
+      text-decoration: none
+    a:hover
+      text-decoration: underline
 
 .post
   height: auto
@@ -146,3 +159,5 @@ h3
     width: 530px
     margin: 10px
     @include curvy(10px)
+    .tweet
+      padding: 6px 0px 0px 20px
