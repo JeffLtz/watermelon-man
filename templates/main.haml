@@ -14,7 +14,7 @@
       DD_roundies.addRule('.content', '10px');
       DD_roundies.addRule('.timestamp', '8px');
       DD_roundies.addRule('.picture', '10px');
-      DD_roundies.addRule('.following', '10px');    
+      DD_roundies.addRule('.following', '10px');
       
     %title
       {title}
@@ -40,20 +40,42 @@
     
       = Haml::Engine.new(File.read('templates/posts.haml')).render
     
-    {block:PreviousPage}
-    %a{:href => "{PreviousPage}"}
-      Newer
-    {/block:PreviousPage}
+    .pagination
+      %h3
     
-    {block:NextPage}
-    %a{:href => "NextPage"}
-      Older
-    {/block:NextPage}
+        {block:PreviousPage}
+        %a{:href => "{PreviousPage}"}
+          Newer
+        {/block:PreviousPage}
+    
+        {block:NextPage}
+        %a{:href => "{NextPage}"}
+          Older
+        {/block:NextPage}
     
     .footer
       .picture.no_left_margin
         %img{:src => "{PortraitURL-128}"}
-      .following.no_right_margin
-        {block:Following}{block:Followed}
-        %a{:img => "{FollowedPortraitURL-24}", :href => "FollowedURL"}
-        {/block:Followed}{/block:Following}
+      
+      {block:Twitter}
+      .twitter.no_right_margin
+        @{TwitterUsername} on twitter
+
+        #tweets
+          %noscript
+            Sorry, but you can't see my 
+            %a{:href => "http://twitter.com/{TwitterUsername}", :target => "_blank"}
+              twitter updates 
+            because you have disabled javascript.
+      %script{:type => "text/javascript"}
+        function recent_tweets(data) {
+        for (i=0; i < data.length; i++) {
+        document.getElementById("tweets").innerHTML = 
+        document.getElementById("tweets").innerHTML + 
+        '<div class="tweet">' + data[i].text +
+        '</div>';
+        }
+        }
+      {/block:Twitter}
+        
+%script{:src => "/tweets.js", :type => "text/javascript"}
