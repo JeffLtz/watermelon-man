@@ -56,10 +56,18 @@
     {/block:Video}
 
     {block:Audio}
+    {block:AlbumArt}
+    %img{:src => "{AlbumArtURL}", :style => "width: 200px; height: 200px;"}
+    {/block:AlbumArt}
     {AudioPlayer}
+    {block:TrackName}
     %p
       %h3
-        {PlayCountWithLabel}
+        {block:Artist}
+        {Artist} - 
+        {/block:Artist}
+        {TrackName} ({PlayCountWithLabel})
+    {/block:TrackName}
     {block:Caption}
     %p
       {Caption}
