@@ -1,0 +1,88 @@
+{block:Text}
+{block:Title}
+%h2
+  {Title}
+{/block:Title}
+{Body}
+{/block:Text}
+
+{block:Chat}
+{block:Title}
+%h2
+  {Title}
+{/block:Title}            
+%dl{:class => "chat"}
+  {block:Lines}
+  %dt
+    {block:Label}
+    %h3
+      {Label}
+    {/block:Label}
+  %dd
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Line}
+  {/block:Lines}
+{/block:Chat}
+
+{block:Quote}
+%h2
+  {Quote}
+{block:Source}{Source}{/block:Source}
+{/block:Quote}      
+
+{block:Link}
+%h2
+  %a{:href => "{URL}", :target => "{Target}"}
+    {Name}
+{block:Description}{Description}{/block:Description}
+{/block:Link}
+
+{block:Photo}
+%a{:href => "{LinkURL}"}
+  %img{:src => "{PhotoURL-500}", :alt => "{PhotoAlt}"}
+{block:Caption}{Caption}{/block:Caption}
+{/block:Photo}
+
+{block:Photoset}
+{Photoset-500}
+{block:Caption}{Caption}{/block:Caption}
+{/block:Photoset}
+
+{block:Video}
+{Video-500}
+{block:Caption}{Caption}{/block:Caption}      
+{/block:Video}
+
+{block:Audio}
+{block:AlbumArt}
+%img{:src => "{AlbumArtURL}", :style => "width: 200px; height: 200px;"}
+{/block:AlbumArt}
+{AudioPlayer}
+{block:TrackName}
+%p
+  %h3
+    {block:Artist}
+    {Artist} - 
+    {/block:Artist}
+    {TrackName} ({PlayCountWithLabel})
+{/block:TrackName}
+{block:Caption}
+%p
+  {Caption}
+{/block:Caption}      
+{/block:Audio}
+
+/ format this
+{block:Answer}
+{Question}
+Asked by {Asker}
+{Answer}
+{/block:Answer}
+
+%br
+
+{block:Date}
+%a{:href => "{Permalink}", :style => "text-decoration: none"}
+  .timestamp
+    %h3
+      {12Hour}:{Minutes}{AmPm} ~ {DayOfMonth} {Month} {Year} {block:NoteCount} ~ {NoteCountWithLabel}{/block:NoteCount}
+{/block:Date}
