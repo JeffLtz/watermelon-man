@@ -1,0 +1,31 @@
+.notelist a{
+  color: {color:Navigation Link};
+}
+
+.notelist a:visited{
+  color: {color:Navigation Visited Link};
+}
+
+.pagination a, .pagination a:visited{
+  color: {color:Navigation Link};
+}
+
+.box_color_1, .title{
+  background-color: {color:Box 1};
+}
+
+.box_color_2{
+  background-color: {color:Box 2};
+}
+
+.box_color_3, .twitter{
+  background-color: {color:Box 3};
+}
+
+.content a, .twitter a{
+  color: {color:Link};
+}
+
+.content a:visited, .twitter a:visited{
+  color: {color:Visited Link};
+}
