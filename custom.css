@@ -12,13 +12,16 @@
 
 .box_color_1, .title{
   background-color: {color:Box 1};
+  border-color: {color:Box 1};
 }
 
 .box_color_2{
   background-color: {color:Box 2};
+  border-color: {color:Box 2};
 }
 
 .box_color_3, .twitter{
+  background-color: {color:Box 3};
   background-color: {color:Box 3};
 }
 

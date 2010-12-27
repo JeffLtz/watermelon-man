@@ -25,12 +25,16 @@ h3
   font: italic bold 18px "Times New Roman"
 
 @mixin curvy($radius)
-  //behavior: "<public:attach event=\"oncontentready\" onevent=\"oncontentready('v08vnSVo78t4JfjH')\" />"
-  //zoom: 1
   border-radius: $radius
   -moz-border-radius: $radius
   -webkit-border-radius: $radius
   -khtml-border-radius: $radius
+  
+@mixin popout($radius)
+  box-shadow: inset 0 0 $radius #252
+  -moz-box-shadow: inset 0 0 $radius #252
+  -webkit-box-shadow: inset 0 0 $radius #252
+  -khtml-box-shadow: inset 0 0 $radius #252
   
 .clear
   clear: both
@@ -48,11 +52,11 @@ h3
   margin: 0px auto
   position: relative
   .title    
-    padding: 10px 20px
+    padding: 35px 45px 30px 35px
     width: 800px
     color: #444444
-    border-color: #0099FF
     @include curvy(12px)
+    @include popout(80px)
     position: relative
     overflow: visible
 .description
@@ -87,15 +91,15 @@ h3
 
 .post
   height: auto
-  width: 550px
+  width: 600px
   margin-top: 60px 
-  margin-left: 200px
+  margin-left: 220px
   position: relative
   .content
     //see custom.css
-    padding: 25px
+    padding: 50px
     @include curvy(10px)
-    border-color: #0099ff
+    @include popout(80px)
     position: relative
     overflow: visible
     img, iframe
@@ -110,7 +114,7 @@ h3
       dd
         padding: 2px 0px 4px 0px
     .timestamp
-      margin-top: 8px
+      margin-top: 33px
       padding: 8px 18px
       width: expression( this.clientWidth > 539 ? "540px" : "auto" )
       max-width: 540px
@@ -165,14 +169,12 @@ h3
     img
       margin: 26px 26px
   .twitter
-    padding: 25px
-    background-color: #0099ff
-    border-color: #0099ff
+    padding: 25px 50px
     display: inline
     float: left
-    height: 130px
-    width: 530px
+    width: 480px
     margin: 10px
     @include curvy(10px)
+    @include popout(80px)
     .tweet
       padding: 6px 0px 0px 20px
