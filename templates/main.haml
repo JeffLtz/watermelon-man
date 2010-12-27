@@ -1,7 +1,7 @@
 %html
   %head
-    %meta{:name => "color:Link", :content => "#FF0000"}
-    %meta{:name => "color:Visited Link", :content => "#BB0000"}
+    %meta{:name => "color:Link", :content => "#dcdcdc"}
+    %meta{:name => "color:Visited Link", :content => "#bcbcbc"}
     %meta{:name => "color:Navigation Link", :content => "#FF0000"}
     %meta{:name => "color:Navigation Visited Link", :content => "#BB0000"}
 
@@ -51,22 +51,28 @@
     
       = Haml::Engine.new(File.read('templates/posts.haml')).render
     
-    .pagination
-      %h3
+      .pagination
+        %h3
     
-        {block:PreviousPage}
-        %a{:href => "{PreviousPage}"}
-          Newer
-        {block:NextPage}
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        {/block:NextPage}
-        {/block:PreviousPage}
+          {block:PreviousPage}
+          .newer
+            %a{:href => "{PreviousPage}"}
+              Newer
+            {block:NextPage}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {/block:NextPage}
+          {/block:PreviousPage}
     
-        {block:NextPage}
-        %a{:href => "{NextPage}"}
-          Older
-        {/block:NextPage}
-    
+          {block:NextPage}
+          .older
+            %a{:href => "{NextPage}"}
+              Older
+            {/block:NextPage}
+            %br
+          .clear
+          %a{:href => "{RSS}"}
+            Feed
+          
     .footer
       .picture.no_left_margin
         %img{:src => "{PortraitURL-128}"}
@@ -74,7 +80,7 @@
       {block:Twitter}
       .twitter.no_right_margin
         %h3
-          %a{:href => "http://twitter.com/{TwitterUsername}", :style => "text-decoration: none"}
+          %a{:href => "http://twitter.com/{TwitterUsername}"}
             @{TwitterUsername}
           on twitter
 
@@ -94,5 +100,12 @@
         }
         }
       {/block:Twitter}
+    .clear
+    .attribution
+      %h3
+        Watermelon Man 
+        %a{:href => "https://github.com/fareastside/watermelon-man"}
+          Theme
+        &nbsp;[Beta] by Jeff Latz
         
 %script{:src => "/tweets.js", :type => "text/javascript"}

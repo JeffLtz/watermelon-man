@@ -147,6 +147,14 @@ h3
 .pagination
   text-align: center
   padding: 55px 0px 0px 0px
+  .newer
+    display: inline
+    float: left
+    margin: 0px 0px 20px 200px
+  .older
+    display: inline
+    float: right
+    margin: 0px 200px 20px 0px
   a
     text-decoration: none
   a:hover
@@ -179,5 +187,16 @@ h3
     margin: 10px
     @include curvy(30px)
     @include popout(60px)
+    h3
+      a
+        text-decoration: none
+      a:hover
+        text-decoration: underline
     .tweet
       padding: 6px 0px 0px 20px
+
+.attribution
+  a
+    text-decoration: none
+  a:hover
+    text-decoration: underline

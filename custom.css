@@ -2,11 +2,11 @@
   color: {color:Navigation Link};
 }
 
-.notelist a:visited{
+.notelist a:visited, .attribution a:visited{
   color: {color:Navigation Visited Link};
 }
 
-.pagination a, .pagination a:visited{
+.pagination a, .pagination a:visited, .attribution a{
   color: {color:Navigation Link};
 }
 
