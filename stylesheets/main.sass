@@ -30,11 +30,11 @@ h3
   -webkit-border-radius: $radius
   -khtml-border-radius: $radius
   
-@mixin popout($radius)
-  box-shadow: inset 0 0 $radius #252
-  -moz-box-shadow: inset 0 0 $radius #252
-  -webkit-box-shadow: inset 0 0 $radius #252
-  -khtml-box-shadow: inset 0 0 $radius #252
+@mixin popout($radius, $color: #252)
+  box-shadow: inset 0 0 $radius $color
+  -moz-box-shadow: inset 0 0 $radius $color
+  -webkit-box-shadow: inset 0 0 $radius $color
+  -khtml-box-shadow: inset 0 0 $radius $color
   
 .clear
   clear: both
@@ -55,7 +55,7 @@ h3
     padding: 35px 45px 30px 35px
     width: 800px
     color: #444444
-    @include curvy(12px)
+    @include curvy(50px)
     @include popout(80px)
     position: relative
     overflow: visible
@@ -70,7 +70,8 @@ h3
   color: #ffffff
   background-color: #000000
   border-color: #000000
-  @include curvy(8px)
+  @include curvy(16px)
+  @include popout(5px, #aaa)
   padding: 6px 28px 9px 24px
   margin: -7px 20px 20px 20px
   h3
@@ -98,7 +99,7 @@ h3
   .content
     //see custom.css
     padding: 50px
-    @include curvy(10px)
+    @include curvy(50px)
     @include popout(80px)
     position: relative
     overflow: visible
@@ -118,12 +119,13 @@ h3
       padding: 8px 18px
       width: expression( this.clientWidth > 539 ? "540px" : "auto" )
       max-width: 540px
-      @include curvy(8px)
+      @include curvy(16px)
+      @include popout(5px, #aaa)
       color: #fff
       background-color: #000
       border-color: #000
       position: absolute
-      right: 15px
+      right: 50px
 
 .notelist
   height: auto
@@ -165,7 +167,8 @@ h3
     height: 180px
     width: 180px
     margin: 10px
-    @include curvy(10px)
+    @include curvy(30px)
+    @include popout(30px, #aaa)
     img
       margin: 26px 26px
   .twitter
@@ -174,7 +177,7 @@ h3
     float: left
     width: 480px
     margin: 10px
-    @include curvy(10px)
-    @include popout(80px)
+    @include curvy(30px)
+    @include popout(60px)
     .tweet
       padding: 6px 0px 0px 20px
