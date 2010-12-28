@@ -56,7 +56,7 @@
     
           {block:PreviousPage}
           .newer
-            %a{:href => "{PreviousPage}"}
+            %a{:href => "{PreviousPage}"}<
               Newer
             {block:NextPage}
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -65,12 +65,12 @@
     
           {block:NextPage}
           .older
-            %a{:href => "{NextPage}"}
+            %a{:href => "{NextPage}"}<
               Older
             {/block:NextPage}
             %br
           .clear
-          %a{:href => "{RSS}"}
+          %a{:href => "{RSS}"}<
             Feed
           
     .footer
@@ -80,14 +80,15 @@
       {block:Twitter}
       .twitter.no_right_margin
         %h3
-          %a{:href => "http://twitter.com/{TwitterUsername}"}
-            @{TwitterUsername}
-          on twitter
+          @
+          %a{:href => "http://twitter.com/{TwitterUsername}"}><
+            {TwitterUsername}
+          &nbsp;on twitter
 
         #tweets
           %noscript
             Sorry, but you can't see my 
-            %a{:href => "http://twitter.com/{TwitterUsername}", :target => "_blank"}
+            %a{:href => "http://twitter.com/{TwitterUsername}", :target => "_blank"}<
               twitter updates 
             because you have disabled javascript.
       %script{:type => "text/javascript"}
@@ -104,7 +105,7 @@
     .attribution
       %h3
         Watermelon Man 
-        %a{:href => "https://github.com/fareastside/watermelon-man"}
+        %a{:href => "https://github.com/fareastside/watermelon-man"}<
           Theme
         &nbsp;[Beta] by Jeff Latz
         
