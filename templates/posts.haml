@@ -1,10 +1,10 @@
 {block:Posts}
-.post
-  - (1..10).to_a.each do |i|
-    = "{block:Post#{i}}"
+- (1..10).to_a.each do |i|
+  = "{block:Post#{i}}"
+  %div{:class => ["post", "horizontal_position_#{i % 2}"]}
     %div{:class => ["content", "box_color_#{(i % 3) + 1}", "{Length}"]}
       = Haml::Engine.new(File.read('templates/post.haml')).render
-    = "{/block:Post#{i}}"
+  = "{/block:Post#{i}}"
   
 {block:PostNotes}
 .notelist
